@@ -147,9 +147,14 @@ import { Component } from '@angular/core';
               #inlineSearchInput="ngModel"
               sprkInput>
           </sprk-input-container>
-          <sprk-icon-input-container iconContainerClasses="sprk-b-TextInput--monetary">
-            <label sprkLabel>Payment</label>
+          <sprk-icon-input-container iconContainerClasses="sprk-b-TextInputIconContainer--monetary">
+            <label
+              class="sprk-b-Label--monetary"
+              sprkLabel>
+              Payment
+            </label>
             <input
+              class="sprk-b-TextInput--monetary"
               name="monetary_input"
               type="text"
               pattern="(^\\$?(\\d+|\\d{1,3}(,\\d{3})*)(\\.\\d+)?$)|^$"
@@ -196,11 +201,16 @@ import { Component } from '@angular/core';
               </div>
             </span>
           </sprk-input-container>
-          <sprk-icon-input-container iconContainerClasses="sprk-b-TextInput--date-picker">
-            <label sprkLabel>Date Input (picker)</label>
+          <sprk-icon-input-container iconContainerClasses="">
+            <label
+              class="sprk-b-Label--with-icon"
+              sprkLabel>
+              Date Input (picker)
+            </label>
             <sprk-icon iconType="calendar" additionalClasses="sprk-b-DatePicker__icon" sprk-input-icon></sprk-icon>
             <input
               name="datepicker_input"
+              class="sprk-b-TextInput--with-icon"
               type="text"
               pattern="^(((0[1358]|1[02])([\\/-]?)(0[1-9]|[12]\\d|3[01])|(0[469]|11)([\\/-]?)(0[1-9]|[12]\\d|30)|02(\\/?)((0?\\d)|[12]\\d))(\\4|\\7|\\9)[12]\\d{3})?$"
               placeholder="MM/DD/YYYY"
